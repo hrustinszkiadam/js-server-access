@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="hu">
+	<head>
+		<meta charset="UTF-8" />
+		<link
+			rel="icon"
+			type="image/svg+xml"
+			href="/icon.svg"
+		/>
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Hozzáférés napló</title>
+	</head>
+	<body>
+		<div id="app">
+			<button id="new-button">Új adat felvétele</button>
+			<form
+				id="new-form"
+				class="hidden"
+			>
+				<input
+					type="text"
+					id="new-name"
+					placeholder="Név"
+					required
+				/>
+				<div>
+                    <label for="new-ip-1">IP Cím:</label>
+					<input
+						type="number"
+						id="new-ip-1"
+						max="255"
+						min="0"
+						value="0"
+						required
+					/>
+					<input
+						type="number"
+						id="new-ip-2"
+						max="255"
+						min="0"
+						value="0"
+						required
+					/>
+					<input
+						type="number"
+						id="new-ip-3"
+						max="255"
+						min="0"
+						value="0"
+						required
+					/>
+					<input
+						type="number"
+						id="new-ip-4"
+						max="255"
+						min="0"
+						value="0"
+						required
+					/>
+				</div>
+				<input
+					type="datetime-local"
+					id="new-access_time"
+					required
+				/>
+				<button id="new-submit">Felvétel</button>
+			</form>
+			<div id="container">
+				<div
+					class="row unselectable"
+					id="header"
+				>
+					<div
+						class="col"
+						id="name"
+					>
+						Név
+					</div>
+					<div
+						class="col"
+						id="ip"
+					>
+						IP Cím
+					</div>
+					<div
+						class="col"
+						id="access_time"
+					>
+						Hozzáférés Ideje
+					</div>
+				</div>
+			</div>
+		</div>
+		<template id="row-template">
+			<div class="row">
+				<div class="col"></div>
+				<div class="col"></div>
+				<div class="col"></div>
+			</div>
+		</template>
+		<template id="asc-arrow">
+			<img
+				src="/asc-arrow.svg"
+				alt="növekvő"
+				class="order-arrow"
+			/>
+		</template>
+		<template id="desc-arrow">
+			<img
+				src="/desc-arrow.svg"
+				alt="csökkenő"
+				class="order-arrow"
+			/>
+		</template>
+		<script
+			type="module"
+			src="src/main.js"
+		></script>
+	</body>
+</html>
